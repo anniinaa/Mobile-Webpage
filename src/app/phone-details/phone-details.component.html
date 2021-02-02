@@ -1,13 +1,80 @@
 <div class="container">
     <button class="btn back" routerLink="" >Back</button>
     <div class="section">
-        <h2>Details</h2>
-        <p>{{phoneDetails.name}}</p>
-        <section class="images">
-            <!-- <img src="{{phoneImages[0]}}" alt="">
-            <ul *ngFor="let image of phoneImages">
-                <img src="{{image}}" alt="">
-            </ul> -->
+        <h2>{{phoneDetails.name}}</h2>
+        <h6>{{phoneDetails.description}}</h6>
+                <section class="images">
+            <figure *ngFor="let image of phoneImages">
+                <img src="{{ '/assets/' + image}}" class="zoom">
+            </figure>
         </section>
+        <div class="details">
+            <section class="one">
+                <div class="part">
+                    <h5>Android</h5>
+                    <li>{{phoneDetails.android.os }}</li>
+                    <li>{{phoneDetails.android.ui}}</li>
+                </div>
+                <!-- <div class="part">
+                    <h5>Availability</h5>
+                    <li>{{phoneDetails.availability}}</li>
+                </div> -->
+                <div class="part">
+                    <h5>Battery</h5>
+                    <li>{{phoneDetails.battery.stadbyTime}}</li>
+                    <li>{{phoneDetails.battery.talkTime}}</li>
+                    <li>{{phoneDetails.battery.type}}</li>
+                </div>
+                <div class="part">
+                    <h5>Camera</h5>
+                    <li>{{phoneDetails.camera.features}}</li>
+                    <li>{{phoneDetails.camera.primary}}</li>
+                </div>
+            </section>
+            <section class="two">
+                <div class="part">
+                    <h5>Hardware</h5>
+                    <li>{{phoneDetails.hardware.accelerometer}}</li>
+                    <li>{{phoneDetails.hardware.audioJack}}</li>
+                    <li>{{phoneDetails.hardware.cpu}}</li>
+                    <li>{{phoneDetails.hardware.fmRadio}}</li>
+                    <li>{{phoneDetails.hardware.physicalKeyboard}}</li>
+                    <li>{{phoneDetails.hardware.usb}}</li>
+                </div>
+            </section>
+            <section class="three">
+                <div class="part">
+                    <h5>Storage</h5>
+                    <li>{{phoneDetails.storage.flash}}</li>
+                    <li>{{phoneDetails.storage.ram}}</li>
+                </div>
+                <div class="part">
+                    <h5>Display</h5>
+                    <li>{{phoneDetails.display.screenResolution}}</li>
+                    <li>{{phoneDetails.display.screenSize}}</li>
+                    <li>{{phoneDetails.display.touchScreen}}</li>
+                </div>
+                <div class="part">
+                    <h5>sizeAndWeight</h5>
+                    <li>{{phoneDetails.sizeAndWeight.dimensions}}</li>
+                    <li>{{phoneDetails.sizeAndWeight.weight}}</li>
+                </div>
+
+            </section>
+            <section class="four">
+                <div class="part">
+                    <h5>Connectivity</h5>
+                    <li>{{phoneDetails.connectivity.bluetooth}}</li>
+                    <li>{{phoneDetails.connectivity.cell}}</li>
+                    <li>{{phoneDetails.connectivity.gps}}</li>
+                    <li>{{phoneDetails.connectivity.infrared}}</li>
+                    <li>{{phoneDetails.connectivity.wifi}}</li>
+                </div>
+                <div class="part">
+                    <h5>Additional features</h5>
+                    <li>{{phoneDetails.additionalFeatures}}</li>
+                </div>
+            </section>
+        </div>
     </div>
 </div>
