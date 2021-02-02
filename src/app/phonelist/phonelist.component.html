@@ -1,0 +1,19 @@
+<div class="search">
+    <select name="" id="">sort by</select>
+    <input type="text">
+    <button class="btn" id="search">search</button>
+</div>
+<div class="container">
+  <ul *ngFor="let phone of phones" class="grid">
+    <div class="phone-item">
+      <a routerLink="details/{{ phone.id }}"> {{ phone.name }}</a>
+      <img class="image" src="{{ phone.imageUrl }}" />
+      <!-- <p>{{ phone.id }} {{ phone.age }}</p> -->
+      <p class="phone-desc">{{ phone.snippet }}</p>
+      <section class="buttons-group">
+          <button class=" btn details">DETAILS</button>
+          <button class=" btn buy">BUY</button>
+      </section>
+    </div>
+  </ul>
+</div>

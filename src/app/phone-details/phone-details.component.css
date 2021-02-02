@@ -1,0 +1,17 @@
+.container{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.section{
+    text-align: center;
+}
+.back{
+    background-color: rgba(255, 127, 80, 0.422);
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin-top: 20px;
+    padding: 10px 15px;
+}
+
+img{
+    width: 20%;
+}

@@ -1,0 +1,12 @@
+nav{
+    background-color: rgba(230, 228, 223, 0.734);
+    padding: 15px;
+}
+h2{
+    font-family: 'Orbitron', sans-serif;
+    color: gray;
+}
+footer{
+    padding: 4px;
+    background-color: rgb(230, 228, 223);
+}
