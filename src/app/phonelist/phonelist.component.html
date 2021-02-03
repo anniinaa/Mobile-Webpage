@@ -1,14 +1,18 @@
 <div class="search">
-    <select name="" id="">sort by</select>
-    <input type="text">
+    <label>Sort by</label>
+    <select (change) = "onSelectedSort($event)" id="">
+      <option value="age">Newest</option>
+      <option value="name">Alphabetical</option>
+    </select>
+    <input type="text" [(ngModel)]="searchValue">
     <button class="btn" id="search">search</button>
 </div>
 <div class="container">
-  <ul *ngFor="let phone of phones" class="grid">
+  <ul *ngFor="let phone of phones | searchfilter: searchValue | sort: [sortBy] " class="grid">
     <div class="phone-item">
       <a routerLink="details/{{ phone.id }}"> {{ phone.name }}</a>
       <img class="image" src="{{ phone.imageUrl }}" />
-      <!-- <p>{{ phone.id }} {{ phone.age }}</p> -->
+      <p class="age">Age: {{ phone.age }} </p>
       <p class="phone-desc">{{ phone.snippet }}</p>
       <section class="buttons-group">
           <button class=" btn details" routerLink="details/{{ phone.id }}">DETAILS</button>

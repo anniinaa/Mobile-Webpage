@@ -47,3 +47,51 @@ h5{
   .zoom:hover {
     transform: scale(1.5);
   }
+  /* @media screen and (max-width: 1315px){
+    .container{
+        width: 100%;
+    }
+
+  } */
+  @media screen and (max-width: 993px){
+    .container{
+        width: 90%;
+    }
+    .section{
+        display: flex;
+        flex-direction: column;
+    }
+    .images{
+        flex-direction: column;
+        order: 2;
+    }
+    .details{
+        padding-top: 20px;
+        order: 1;
+    }
+
+}
+@media screen and (max-width: 768px){
+    .section{
+        padding-top: 55px;
+        display: flex;
+        flex-direction: column;
+    }
+    .images{
+        flex-direction: column;
+        order: 2;
+    }
+    .details{
+        padding-top: 20px;
+        order: 1;
+    }
+    .details{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .back{
+        padding: 8px;
+        font-size: 15px;
+        margin-top: 10px;
+    }
+}

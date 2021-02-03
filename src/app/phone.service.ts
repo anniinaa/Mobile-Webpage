@@ -16,7 +16,6 @@ export class PhoneService{
 
   getPhone(phoneId: String): any{
     return this.http.get(`/assets/data/${phoneId}.json`);
-  
   }
 
 }

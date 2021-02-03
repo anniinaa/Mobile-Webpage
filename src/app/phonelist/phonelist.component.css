@@ -24,6 +24,14 @@ input{
     font-weight: bold;
     font-family: 'Open Sans Condensed', sans-serif;
 }
+label{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    padding-right: 5px;
+
+}
+
 section{
     padding: 5px;
     margin-top: 0;
@@ -37,6 +45,9 @@ section{
     margin-left: 10px;
     padding: 5px 15px;
     background-color: rgba(25, 171, 25, 0.374);
+}
+.age{
+    font-size: 12px;
 }
 .image{
     padding: 10px;
@@ -71,13 +82,37 @@ p{
 }
 @media screen and (max-width: 993px){
     .container{
+        width: 100%;
         display: grid;
         grid-template-columns: auto auto;
     }
+
 }
 @media screen and (max-width: 768px){
     .container{
+        width: 100%;
         display: grid;
         grid-template-columns: auto;
     }
+    ul{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 360px){
+
+.search{
+    display: grid;
+    grid-template-columns: 50%;
+    justify-content: center;
+
+}
+#search{
+    width: 88%;
+    margin: 0;
+    padding: 5px;
+}
+
+input{
+    width: 88%;
+}
 }

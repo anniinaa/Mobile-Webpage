@@ -6,10 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { PhonelistComponent } from './phonelist/phonelist.component';
 import { PhoneDetailsComponent } from './phone-details/phone-details.component';
+import { OrderModule } from 'ngx-order-pipe';
+import { SearchfilterPipe } from './searchfilter.pipe';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,8 @@ import { PhoneDetailsComponent } from './phone-details/phone-details.component';
     HomepageComponent,
     PhonelistComponent,
     PhoneDetailsComponent,
+    SearchfilterPipe,
+    SortPipe,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +29,8 @@ import { PhoneDetailsComponent } from './phone-details/phone-details.component';
     NgbModule,
     FormsModule,
     HttpClientModule,
+    OrderModule,
+    ReactiveFormsModule
    
   ],
   providers: [PhoneService],
